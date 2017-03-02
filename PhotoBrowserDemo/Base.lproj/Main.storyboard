@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoBrowserDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8J-1g-VIa">
+                                <rect key="frame" x="16" y="70" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="auy-Fv-G5P" appends="YES" id="acO-ul-y39"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-ux-ee1">
+                                <rect key="frame" x="180" y="70" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rm3-sZ-Fic" appends="YES" id="J9q-JR-aNn"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-Vf-Ayp">
+                                <rect key="frame" x="16" y="235" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="huC-D2-vZp" appends="YES" id="SX7-I6-NTk"/>
+                                </connections>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-f6-Ns8">
+                                <rect key="frame" x="180" y="235" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fDF-J5-FYn" appends="YES" id="Xwy-lb-uO9"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="imageViews" destination="X8J-1g-VIa" collectionClass="NSMutableArray" id="cac-tT-Ira"/>
+                        <outletCollection property="imageViews" destination="Frd-ux-ee1" collectionClass="NSMutableArray" id="iql-sn-3hO"/>
+                        <outletCollection property="imageViews" destination="yMy-Vf-Ayp" collectionClass="NSMutableArray" id="mV9-Sr-1RV"/>
+                        <outletCollection property="imageViews" destination="Uei-f6-Ns8" collectionClass="NSMutableArray" id="nbh-fj-8nv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="auy-Fv-G5P">
+                    <connections>
+                        <action selector="imageTap:" destination="BYZ-38-t0r" id="8K9-PE-kup"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rm3-sZ-Fic">
+                    <connections>
+                        <action selector="imageTap:" destination="BYZ-38-t0r" id="g1C-xd-rV6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="huC-D2-vZp">
+                    <connections>
+                        <action selector="imageTap:" destination="BYZ-38-t0r" id="utJ-pE-vYX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fDF-J5-FYn">
+                    <connections>
+                        <action selector="imageTap:" destination="BYZ-38-t0r" id="Xdx-eV-3ag"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
