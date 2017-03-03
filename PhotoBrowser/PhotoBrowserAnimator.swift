@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+/// 转场动画
 class PhotoBrowserAnimator: NSObject {
     
     var fromImageView: UIImageView?

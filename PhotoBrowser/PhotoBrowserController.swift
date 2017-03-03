@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PhotoBrowserController: UIViewController {
+/// 图片浏览器
+public class PhotoBrowserController: UIViewController {
 
     fileprivate var photos: PhotoBrowserPhotos
     
@@ -40,7 +41,7 @@ class PhotoBrowserController: UIViewController {
     }()
     
     
-    init(selectedIndex: Int, urls: [String], parentImageViews: [UIImageView]) {
+    public init(selectedIndex: Int, urls: [String], parentImageViews: [UIImageView]) {
         
         photos = PhotoBrowserPhotos()
         photos.selectedIndex = selectedIndex
@@ -57,17 +58,17 @@ class PhotoBrowserController: UIViewController {
     }
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         setupui()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         statusBarHidden = true
@@ -77,18 +78,18 @@ class PhotoBrowserController: UIViewController {
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override public func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         statusBarHidden = false
         setNeedsStatusBarAppearanceUpdate()
     }
     
-    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+    override public var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return .slide
     }
     
-    override var prefersStatusBarHidden: Bool {
+    override public var prefersStatusBarHidden: Bool {
         return statusBarHidden
     }
 }
