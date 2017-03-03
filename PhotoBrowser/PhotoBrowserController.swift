@@ -210,7 +210,7 @@ private extension PhotoBrowserController {
 // MARK: - UIGestureRecognizerDelegate
 extension PhotoBrowserController: UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 }
@@ -218,7 +218,7 @@ extension PhotoBrowserController: UIGestureRecognizerDelegate {
 // MARK: - UIPageViewControllerDelegate, UIPageViewControllerDataSource
 extension PhotoBrowserController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         guard let vc = viewController as? PhotoViewerController else { return UIViewController() }
         
@@ -231,7 +231,7 @@ extension PhotoBrowserController: UIPageViewControllerDelegate, UIPageViewContro
         return viewerWithIndex(index: index)
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let vc = viewController as? PhotoViewerController else { return UIViewController() }
         
@@ -244,7 +244,7 @@ extension PhotoBrowserController: UIPageViewControllerDelegate, UIPageViewContro
     }
     
     
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         guard let viewer = pageViewController.viewControllers?.first as? PhotoViewerController else { return }
         
