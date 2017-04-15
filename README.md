@@ -27,8 +27,6 @@ $ pod install
 Add the following code where needed
 
 ```swift
-/// 
-
 public class PhotoBrowserController: UIViewController {
     
     ///  selectedIndex: 选中图片索引， urls：url数组， parentImageViews：图片数组
