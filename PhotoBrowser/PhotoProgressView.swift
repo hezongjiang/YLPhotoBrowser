@@ -52,7 +52,7 @@ public class PhotoProgressView: UIView {
         // 绘制外圈
         borderTintColor.setStroke()
         
-        let borderPath = UIBezierPath.init(arcCenter: center, radius: radius - lineWidth * 0.5, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
+        let borderPath = UIBezierPath.init(arcCenter: center, radius: radius - lineWidth * 0.5, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         borderPath.lineWidth = lineWidth
         borderPath.stroke()
         
@@ -60,14 +60,14 @@ public class PhotoProgressView: UIView {
         trackTintColor.setStroke()
         
         radius -= lineWidth * 2
-        let trackPath = UIBezierPath.init(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
+        let trackPath = UIBezierPath.init(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         trackPath.fill()
         
         //绘制进度
         progressTintColor.set()
         
-        let start = -(CGFloat)(M_PI_2);
-        let end = start + progress * CGFloat(M_PI) * 2;
+        let start: CGFloat = -1.0 * .pi * 0.5;
+        let end = start + progress * .pi * 2;
         let progressPath = UIBezierPath.init(arcCenter: center, radius: radius, startAngle: start, endAngle: end, clockwise: true)
         progressPath.addLine(to: center)
         progressPath.close()
