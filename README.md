@@ -6,13 +6,13 @@ A lightweight picture browsing framework
 
 #### Podfile
 
-To integrate YLCycleScrollView into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate YLPhotoBrowser into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 platform :ios, '8.0'
 use_frameworks!
 target 'TargetName' do
-pod 'YLCycleScrollView'
+pod 'YLPhotoBrowser'
 end
 ```
 
@@ -24,8 +24,7 @@ $ pod install
 ```
 ## How to use
 
-Add the following code where needed
-
+1、实例化PhotoBrowserController控制器
 ```swift
 public class PhotoBrowserController: UIViewController {
     
@@ -33,3 +32,4 @@ public class PhotoBrowserController: UIViewController {
     public init(selectedIndex: Int, urls: [String], parentImageViews: [UIImageView])
 }
 ```
+2、模态弹出
